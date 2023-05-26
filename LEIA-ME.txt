@@ -1,0 +1,21 @@
+
+********* Como acertar arquivo SPED ************
+FINAL 5342
+bloco 800/850
+
+1 - Carregar o arquivo SPED; 
+2 - Incluir na ferramenta no campo bloco cabeçalho: C800 e no campo bloco de Itens inserir: C850; 
+3 - Ao gerar SPED, será excluído os registros inválidos com final 5342 dos blocos C800 (HEADER) e C850 (Registros);
+
+********* Como acertar arquivo contribuições ************
+
+1 - abra o arquivo contribuiçoes e recorte todo o bloco que contenham C860(HEADER) e seus respectivos blocos C870 colando em outro arquivo;
+2 - na linha do C860 possui a data, inserir a mesma nos blocos C870 já na primeira posição 
+    ex: "02042023|C870|3|5102|409,67|18,44|06|0,00|0,00|0,00|06|0,00|0,00|0,00|000006|" na linha C860 tambem pode ser incluído a data no Início - 
+	Obs.: inserir até o final do bloco que possui a mesma data.
+3 - na ferramenta, carregar o arquivo que contem somente os blocos com a data já configurada, inserir a data no campo nesse formato ex: 02042023 e no 
+    campo valor, inserir o valor somado que precisa ser excluído na respectiva data;
+4 - ao selecionar o botão "Gerar Contribuições", a ferramenta apresenta até 3 combinações encontradas próxima ao valor e exclui os registros salvando o novo arquivo;
+5 - após realizar todo o processo dia por dia, copiar todos os registros do arquivo final e copiar para o arquivo original de onde foi recortado todo o bloco;
+6 - Para ajustar o rateio do bloco M400 (HEADER) e M410 (Registros), necessário utilizar a planilha de exemplo para realizar o cálculo.
+7 - O Bloco M800 (HEADER) M810 (Registros), são basicamente uma cópia do M400 e M410. Portanto é necessário checar e alterar com as mesmas informações;
